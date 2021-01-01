@@ -1,0 +1,37 @@
+.resultcontainer {
+  width: 50%;
+  height: 20rem;
+  background-color: white;
+  overflow-y: scroll;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.resultcontainer h2 {
+  margin-left: 1rem;
+}
+
+.resultcontainer ul {
+  margin-top: 0;
+  height: 100%;
+  width: 60%;
+}
+
+.resultcontainer li {
+  text-align: start;
+  height: 2rem;
+}
+
+.titleandbutton {
+  display: flex;
+  width: 100%;
+}
+
+.titleandbutton button {
+  width: 8rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}

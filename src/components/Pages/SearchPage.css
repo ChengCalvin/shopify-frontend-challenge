@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-left: 24vw;
+  padding-right: 24vw;
+}
+
+.searchsection {
+  width: 100%;
+  background-color: white;
+}
+
+.searchsection p {
+  text-align: start;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resultandnominee {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 12vw;
+    padding-right: 12vw;
+  }
+}
