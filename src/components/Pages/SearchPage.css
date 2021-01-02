@@ -27,7 +27,14 @@
 
 @media (max-width: 768px) {
   .container {
-    padding-left: 12vw;
-    padding-right: 12vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }

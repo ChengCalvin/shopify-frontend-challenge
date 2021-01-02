@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import NomineeList from "../NomineeList/NomineeList";
-//import Spinner from "../UI/Spinner/Spinner";
+import Spinner from "../UI/Spinner/Spinner";
 
 import "./SearchPage.css";
 const SearchPage = () => {
@@ -16,6 +16,8 @@ const SearchPage = () => {
   const [movieTitle, setMovieTitle] = useState("");
   const [searchedMovie, setSearchedMovie] = useState();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const searchBarChangeHandler = (event) => {
     event.preventDefault();
     setMovieTitle(event.target.value);
@@ -23,11 +25,13 @@ const SearchPage = () => {
 
   const movieSearchSubmitHandler = (event) => {
     if (event.key === "Enter") {
+      setIsLoading(true);
       fetch(`http://www.omdbapi.com/?s=${movieTitle}&apikey=6416bd9f`)
         .then((response) => response.json())
         .then((data) => {
           console.log(data.Search);
           setSearchedMovie(data.Search);
+          setIsLoading(false);
         });
     }
   };
@@ -44,7 +48,14 @@ const SearchPage = () => {
         />
       </div>
       <div className="resultandnominee">
-        <SearchResults searchedMovie={searchedMovie} movieTitle={movieTitle} />
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          <SearchResults
+            searchedMovie={searchedMovie}
+            movieTitle={movieTitle}
+          />
+        )}
         <NomineeList />
       </div>
     </div>

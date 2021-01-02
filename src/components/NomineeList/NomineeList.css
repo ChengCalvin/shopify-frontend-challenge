@@ -1,13 +1,50 @@
 .nomineescontainer {
-  width: 30%;
-  height: auto;
+  width: 40%;
+  height: fit-content;
   background-color: white;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 1rem;
 }
 
 .nomineescontainer h2 {
   margin-left: 1rem;
+}
+
+.nomineescontainer ul {
+  height: fit-content;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  width: auto;
+}
+
+.nomineescontainer li {
+  text-align: start;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.listitem {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.listitem button {
+  margin-left: 1rem;
+  width: 8rem;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nomineescontainer h2 {
+    font-size: 1rem;
+  }
+  .nomineescontainer li {
+    font-size: 0.7rem;
+  }
+  .listitem button {
+    width: 4rem;
+  }
 }

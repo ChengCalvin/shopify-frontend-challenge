@@ -1,0 +1,3 @@
+export const ADD_NOMINEE = "ADD_NOMINEE";
+export const GET_NOMINEES = "GET_NOMINEES";
+export const REMOVE_NOMINEE = "REMOVE_NOMINEE";
