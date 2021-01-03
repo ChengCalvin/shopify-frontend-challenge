@@ -16,9 +16,9 @@ const NomineeList = () => {
     <div className="nomineescontainer">
       <h2>Nominations</h2>
       <ul>
-        {nomineeList?.map((movieNominee) => {
+        {nomineeList?.map((movieNominee, i) => {
           return (
-            <div className="listitem">
+            <div key={i} className="listitem">
               <li>{movieNominee}</li>
               <button
                 type="button"

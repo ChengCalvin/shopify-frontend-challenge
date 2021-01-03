@@ -8,6 +8,14 @@
   padding-right: 24vw;
 }
 
+.banner {
+  left: 0;
+  width: 100%;
+  background-color: palevioletred;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .searchsection {
   width: 100%;
   background-color: white;
@@ -29,6 +37,9 @@
   .container {
     padding-left: 8vw;
     padding-right: 8vw;
+  }
+  .resultandnominee {
+    flex-direction: column;
   }
 }
 

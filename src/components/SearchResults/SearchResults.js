@@ -13,22 +13,30 @@ const SearchResults = (props) => {
       dispatch(addNominee(movieTitle));
     } else {
       //TODO disable all button
-      console.log("list full");
+      alert("You have Nominated 5 Movies!");
     }
   };
 
   return (
     <div className="resultcontainer">
-      <h2>{props.movieTitle ? `Results for "${props.movieTitle}"` : <></>}</h2>
+      {props.movieTitle ? (
+        <h2>{`Results for "${props.movieTitle}"`}</h2>
+      ) : (
+        <></>
+      )}
       <ul>
         {props.searchedMovie?.map((movie, i) => {
           return (
             <div key={i} className="titleandbutton">
-              <li>{movie.Title}</li>
+              <li>{`${movie.Title} (${movie.Year})`}</li>
               <button
                 type="button"
-                onClick={() => addNomineeHandler(movie.Title)}
-                disabled={nomineeList.includes(movie.Title)}
+                onClick={() =>
+                  addNomineeHandler(`${movie.Title} (${movie.Year})`)
+                }
+                disabled={nomineeList.includes(
+                  `${movie.Title} (${movie.Year})`
+                )}
               >
                 Nominate
               </button>

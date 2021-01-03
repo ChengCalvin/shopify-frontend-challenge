@@ -3,20 +3,16 @@ import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import NomineeList from "../NomineeList/NomineeList";
 import Spinner from "../UI/Spinner/Spinner";
+import { useSelector } from "react-redux";
 
 import "./SearchPage.css";
 const SearchPage = () => {
-  /* 
-        1. title
-        2. search bar
-        3. search result
-        4. nominate section
-        
-        */
   const [movieTitle, setMovieTitle] = useState("");
   const [searchedMovie, setSearchedMovie] = useState();
 
   const [isLoading, setIsLoading] = useState(false);
+
+  const nomineeList = useSelector((state) => state.nominee.nomineeList);
 
   const searchBarChangeHandler = (event) => {
     event.preventDefault();
@@ -29,7 +25,6 @@ const SearchPage = () => {
       fetch(`http://www.omdbapi.com/?s=${movieTitle}&apikey=6416bd9f`)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data.Search);
           setSearchedMovie(data.Search);
           setIsLoading(false);
         });
@@ -38,13 +33,18 @@ const SearchPage = () => {
 
   return (
     <div className="container">
+      {nomineeList.length === 5 ? (
+        <div className="banner">You have added 5 Movie!</div>
+      ) : (
+        <></>
+      )}
       <h1>The Shoppies</h1>
       <div className="searchsection">
         <p>Movie Title</p>
         <SearchBar
           inputChanged={searchBarChangeHandler}
           movieTitle={movieTitle}
-          enterPressed={movieSearchSubmitHandler}
+          movieSearch={movieSearchSubmitHandler}
         />
       </div>
       <div className="resultandnominee">

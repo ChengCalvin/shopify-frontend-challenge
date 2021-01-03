@@ -6,13 +6,18 @@ import "./SearchBar.css";
 const SearchBar = (props) => {
   return (
     <div className="searchcontainer">
-      <img className="searchicon" src={SearchIcon} alt="search" />
+      <img
+        className="searchicon"
+        src={SearchIcon}
+        alt="search"
+        onClick={props.movieSearch}
+      />
       <input
         type="text"
         placeholder="Search"
         onChange={props.inputChanged}
         value={props.movieTitle}
-        onKeyPress={props.enterPressed}
+        onKeyPress={props.movieSearch}
       />
     </div>
   );

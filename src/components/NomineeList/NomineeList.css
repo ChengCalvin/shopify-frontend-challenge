@@ -38,6 +38,10 @@
 }
 
 @media (max-width: 768px) {
+  .nomineescontainer {
+    width: 100%;
+    padding: 0;
+  }
   .nomineescontainer h2 {
     font-size: 1rem;
   }
