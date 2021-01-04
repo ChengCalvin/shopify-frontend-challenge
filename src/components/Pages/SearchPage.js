@@ -22,7 +22,7 @@ const SearchPage = () => {
   const movieSearchSubmitHandler = (event) => {
     if (event.key === "Enter") {
       setIsLoading(true);
-      fetch(`http://www.omdbapi.com/?s=${movieTitle}&apikey=6416bd9f`)
+      fetch(`https://www.omdbapi.com/?s=${movieTitle}&apikey=6416bd9f`)
         .then((response) => response.json())
         .then((data) => {
           setSearchedMovie(data.Search);
