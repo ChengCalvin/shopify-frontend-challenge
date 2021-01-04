@@ -11,10 +11,10 @@ const NomineeList = () => {
   useEffect(() => {
     if (Object.keys(localStorage).length > 0) {
       Object.keys(localStorage).map((movieTitle) => {
-        dispatch(addNominee(movieTitle));
+        return dispatch(addNominee(movieTitle));
       });
     }
-  }, []);
+  }, [dispatch]);
 
   const removeNomineeHandler = (movieNominee) => {
     dispatch(removeNominee(movieNominee));

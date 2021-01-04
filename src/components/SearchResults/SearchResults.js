@@ -13,7 +13,6 @@ const SearchResults = (props) => {
       dispatch(addNominee(movieTitle));
       window.localStorage.setItem(`${movieTitle}`, `${movieTitle}`);
     } else {
-      //TODO disable all button
       alert("You have Nominated 5 Movies!");
     }
   };
