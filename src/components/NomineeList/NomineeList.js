@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeNominee } from "../../reducers/action";
+import { addNominee, removeNominee } from "../../reducers/action";
 
 import "./NomineeList.css";
 
@@ -8,8 +8,17 @@ const NomineeList = () => {
   const nomineeList = useSelector((state) => state.nominee.nomineeList);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (Object.keys(localStorage).length > 0) {
+      Object.keys(localStorage).map((movieTitle) => {
+        dispatch(addNominee(movieTitle));
+      });
+    }
+  }, []);
+
   const removeNomineeHandler = (movieNominee) => {
     dispatch(removeNominee(movieNominee));
+    localStorage.removeItem(movieNominee);
   };
 
   return (
