@@ -20,7 +20,7 @@ const SearchPage = () => {
   };
 
   const movieSearchSubmitHandler = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" || event.type === "click") {
       setIsLoading(true);
       fetch(`https://www.omdbapi.com/?s=${movieTitle}&apikey=6416bd9f`)
         .then((response) => response.json())
