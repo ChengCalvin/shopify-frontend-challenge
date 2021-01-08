@@ -16,23 +16,28 @@
 .resultcontainer ul {
   margin-top: 0;
   height: 100%;
-  width: fit-content;
+  width: 80%;
   margin-left: 1rem;
+  margin-bottom: 0;
 }
 
 .resultcontainer li {
   text-align: start;
-  height: 2rem;
+  width: 60%;
+  height: fit-content;
 }
 
 .titleandbutton {
   display: flex;
+  justify-content: space-between;
   width: 100%;
+  padding-bottom: 0.5rem;
 }
 
 .titleandbutton button {
-  width: 8rem;
   height: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-bottom: 0.5rem;
   margin-left: 1rem;
 }
@@ -45,11 +50,14 @@
   .resultcontainer h2 {
     font-size: 1rem;
   }
+  .resultcontainer ul {
+    width: 85%;
+  }
   .resultcontainer li {
     font-size: 0.7rem;
   }
   .titleandbutton button {
-    width: 4;
-    height: 1;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }

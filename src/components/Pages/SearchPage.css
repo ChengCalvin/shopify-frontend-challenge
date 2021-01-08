@@ -8,6 +8,10 @@
   padding-right: 24vw;
 }
 
+.container h1 {
+  color: #057e0f;
+}
+
 .banner {
   left: 0;
   width: 100%;

@@ -5,7 +5,9 @@ import SearchPage from "./components/Pages/SearchPage";
 function App() {
   return (
     <div className="App">
-      <SearchPage />
+      <main>
+        <SearchPage />
+      </main>
     </div>
   );
 }
