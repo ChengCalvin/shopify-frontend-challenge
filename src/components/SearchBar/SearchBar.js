@@ -14,7 +14,7 @@ const SearchBar = (props) => {
       />
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Search Movie"
         onChange={props.inputChanged}
         value={props.movieTitle}
         onKeyPress={props.movieSearch}

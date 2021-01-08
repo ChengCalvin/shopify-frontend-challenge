@@ -16,8 +16,7 @@
 .nomineescontainer ul {
   height: fit-content;
   margin-top: 0;
-
-  width: auto;
+  width: 80%;
 }
 
 .nomineescontainer li {
@@ -38,6 +37,7 @@
   height: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  border-radius: 5rem;
 }
 
 @media (max-width: 768px) {
