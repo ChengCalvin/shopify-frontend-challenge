@@ -34,7 +34,7 @@ const SearchPage = () => {
   return (
     <div className="container">
       {nomineeList.length === 5 ? (
-        <div className="banner">You have added 5 Movie!</div>
+        <div className="banner">You have added 5 movies!</div>
       ) : (
         <></>
       )}

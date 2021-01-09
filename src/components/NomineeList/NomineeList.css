@@ -40,6 +40,10 @@
   border-radius: 5rem;
 }
 
+.listitem button:focus {
+  outline: none;
+}
+
 @media (max-width: 768px) {
   .nomineescontainer {
     width: 100%;

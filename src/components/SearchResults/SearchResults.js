@@ -13,7 +13,9 @@ const SearchResults = (props) => {
       dispatch(addNominee(movieTitle));
       window.localStorage.setItem(`${movieTitle}`, `${movieTitle}`);
     } else {
-      alert("You have Nominated 5 Movies!");
+      alert(
+        "You have Nominated 5 movies! Remove from Nominations to add new movie"
+      );
     }
   };
 

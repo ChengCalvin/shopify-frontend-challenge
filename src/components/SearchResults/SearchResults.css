@@ -43,6 +43,10 @@
   border-radius: 5rem;
 }
 
+.titleandbutton button:focus {
+  outline: none;
+}
+
 @media (max-width: 768px) {
   .resultcontainer {
     width: 100%;
