@@ -1,0 +1,15 @@
+header {
+  width: 100vw;
+  height: fit-content;
+  top: 0;
+  background-color: #057e0f;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

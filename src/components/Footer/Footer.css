@@ -1,0 +1,17 @@
+footer {
+  width: 100vw;
+  height: fit-content;
+  background-color: #057e0f;
+  color: white;
+  margin-top: 12rem;
+  position: relative;
+  bottom: 0;
+}
+
+footer p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.8rem;
+}

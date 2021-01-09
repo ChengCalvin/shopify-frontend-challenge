@@ -32,33 +32,35 @@ const SearchPage = () => {
   };
 
   return (
-    <div className="container">
-      {nomineeList.length === 5 ? (
-        <div className="banner">You have added 5 movies!</div>
-      ) : (
-        <></>
-      )}
-      <h1>The Shoppies</h1>
-      <div className="searchsection">
-        <p>Movie Title</p>
-        <SearchBar
-          inputChanged={searchBarChangeHandler}
-          movieTitle={movieTitle}
-          movieSearch={movieSearchSubmitHandler}
-        />
-      </div>
-      <div className="resultandnominee">
-        {isLoading ? (
-          <Spinner />
+    <main>
+      <div className="container">
+        {nomineeList.length === 5 ? (
+          <div className="banner">You have added 5 movies!</div>
         ) : (
-          <SearchResults
-            searchedMovie={searchedMovie}
-            movieTitle={movieTitle}
-          />
+          <></>
         )}
-        <NomineeList />
+        <h1>The Shoppies</h1>
+        <div className="searchsection">
+          <p>Movie Title</p>
+          <SearchBar
+            inputChanged={searchBarChangeHandler}
+            movieTitle={movieTitle}
+            movieSearch={movieSearchSubmitHandler}
+          />
+        </div>
+        <div className="resultandnominee">
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <SearchResults
+              searchedMovie={searchedMovie}
+              movieTitle={movieTitle}
+            />
+          )}
+          <NomineeList />
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 
