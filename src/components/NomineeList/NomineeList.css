@@ -38,10 +38,18 @@
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 5rem;
+  background: #057e0f;
+  color: white;
+  border: none;
 }
 
 .listitem button:focus {
   outline: none;
+}
+
+.listitem button:hover {
+  cursor: pointer;
+  background: #04580b;
 }
 
 @media (max-width: 768px) {

@@ -41,10 +41,23 @@
   margin-bottom: 0.5rem;
   margin-left: 1rem;
   border-radius: 5rem;
+  background: #057e0f;
+  color: white;
+  border: none;
 }
 
 .titleandbutton button:focus {
   outline: none;
+}
+
+.titleandbutton button:hover {
+  cursor: pointer;
+  background: #04580b;
+}
+
+.titleandbutton button:disabled {
+  background-color: rgb(192, 192, 192);
+  color: rgb(117, 117, 117);
 }
 
 @media (max-width: 768px) {
